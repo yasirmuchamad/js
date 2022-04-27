@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select</title>
+</head>
+<body>
+    <script>
+        function pilih() {
+            var jurstr = (document.fform.jurusan.value);
+            document.fform.ojurusan.value = jurstr;
+        }
+    </script>
+    <form action="" name="fform">
+        <h2>Peggunaan select</h2>
+        <h3>Masukkan : </h3>
+        Jurusan di Uniss : <select name="jurusan" size="1">
+            <option value="TI">Teknik Informatika</option>
+            <option value="MI">Management Informatika</option>
+            <option value="TK">Teknik Komputer</option>
+            <option value="TE">Teknik Elektro</option>
+        </select>
+        <p>
+            <input type="button" value="Kirim" onclick="pilih()">
+            <input type="reset" value="Clear" >
+        </p>
+        <h2>Output Jurusan :</h2>
+        <input type="text" name="ojurusan">
+    </form>
+</body>
+</html>

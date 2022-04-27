@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan</title>
+</head>
+<body>
+    <script>
+        function kirim(form) {
+            var nimstr = (document.fform.nim.value);
+            document.fform.onim.value = nimstr;
+            var namastr = (document.fform.nama.value);
+            document.fform.onama.value = namastr;
+            var jenstr = (document.fform.jenkel.value);
+            document.fform.ojenkel.value = jenstr;
+            var agastr = (document.fform.agama.value);
+            document.fform.oagama.value = agastr;
+            var kawstr = (document.fform.kawin.value);
+            document.fform.okawin.value = kawstr;
+            var jurstr = (document.fform.jur.value);
+            document.fform.ojur.value = jurstr;
+            var komstr = (document.fform.kom.value);
+            document.fform.okom.value = komstr;
+        }
+    </script>
+    <form name="fform">
+    <center><h2>Daftar MAhasiswa</h2>
+    <h3>Universitas Tatas</h3>
+    </center>
+    <hr>
+    NIM             : <input type="text" name="nim"><br>
+    Nama            : <input type="text" name="nama"><br>
+    Jenis Kelamin   : <select name="jenkel">
+                        <option value="laki_laki">Laki-Laki</option>
+                        <option value="perempuan">perempuan</option>
+                        </select><br>
+    Agama           : <select name="agama">
+                        <option value="Islam">Islam</option>
+                        <option value="Kristen">Kristen</option>
+                        <option value="Hindu">Hindu</option>
+                        <option value="Budha">Budha</option>
+                        </select><br>
+    Status          :   <input type="radio" name="kawin" value="kawin">Kawin<br>
+    Jurusan         :   <select name="jur">
+                        <option value="Teknik Informatika">Teknik Informatika</option>
+                        <option value="Psikologi">Psikologi</option>
+                        </select><br>
+    Komentar        :   <textarea name="kom" cols="30" rows="10"></textarea>
+    <p>
+        <input type="button" value="confirm" onclick="kirim(this.form)">
+        <input type="reset" value="Reset">
+    </p>
+    <h2>Data Mahasiswa :</h2>
+    NIM             : <input type="text" name="onim"><br>
+    Nama            : <input type="text" name="onama"><br>
+    Jenis Kelamin   : <input type="text" name="ojenkel"><br>
+    Agama           : <input type="text" name="oagama"><br>
+    Status          : <input type="text" name="okawin"><br>
+    Jurusan         : <input type="text" name="ojur"><br>
+    Komentar        : <textarea name="okom" cols="20" rows="10"></textarea>
+</form>
+</body>
+</html>
